@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class TimedLevel:MonoBehaviour {
 
-  public TimedLevelGen tlg; 
+  public TimedLevelGen tlg;
+
+   private float theTime;
 
   // Start is called before the first frame update
   void Start() {
     if (tlg) {
       Debug.LogError("Need a Level Gen Object"); 
     }
+        theTime = Time.time;
     }
 
     // Update is called once per frame
     void Update() {
-    tlg.secondsForLevel--; 
+
+        theTime += Time.time;
+
+        if(theTime >= tlg.secondsForLevel)
+        {
+            //end the level
+        }
   }
 }

@@ -18,8 +18,8 @@ public class ColorLevel:MonoBehaviour {
         
     }
 
-  bool checkValidTop(coloredBlocks block, coloredBlocks block2) {
-    return (clg.blocks.Find(c => c.name == block)).nonBlocks.Contains(this.block2); 
-  }
+  //bool checkValidTop(coloredBlocks block, coloredBlocks block2) {
+   // return (clg.blocks.Find(c => c.name == block)).nonBlocks.Contains(this.block2); 
+  //}
 
 }
